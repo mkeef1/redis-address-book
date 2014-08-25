@@ -4,12 +4,12 @@
 'use strict';
 
 var expect    = require('chai').expect,
-    Person    = require('../../app/models/person'),
+    User      = require('../../app/models/user'),
     dbConnect = require('../../app/lib/mongodb'),
     cp        = require('child_process'),
-    db        = 'template-test';
+    db        = 'rab-test';
 
-describe('Person', function(){
+describe('User', function(){
   before(function(done){
     dbConnect(db, function(){
       done();
@@ -23,16 +23,16 @@ describe('Person', function(){
   });
 
   describe('constructor', function(){
-    it('should create a new Person object', function(){
-      var p = new Person();
-      expect(p).to.be.instanceof(Person);
+    it('should create a new User object', function(){
+      var p = new User();
+      expect(p).to.be.instanceof(User);
     });
   });
 
   describe('.all', function(){
-    it('should get all people', function(done){
-      Person.all(function(err, people){
-        expect(people).to.have.length(2);
+    it('should get all users', function(done){
+      User.all(function(err, users){
+        expect(users).to.have.length(0);
         done();
       });
     });

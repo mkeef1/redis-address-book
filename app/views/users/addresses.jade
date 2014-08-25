@@ -1,0 +1,17 @@
+extends ../shared/template
+block content
+  h2 Address Page
+  .row
+    .col-xs-3
+      form(role='form', method='post', action='/addresses')
+        .form-group
+          label(for='name') Name
+          input.form-control#name(type='name', name='name', autofocus=true)
+        .form-group
+          label(for='color') Color
+          input.form-control#color(type='color', name='color')
+        .form-group
+          label(for='twitter') Twitter
+          input.form-control#twitter(type='twitter', name='twitter')
+        button.btn.btn-primary(type='submit') Login
+block scripts
