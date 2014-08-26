@@ -32,6 +32,8 @@ module.exports = function(app, express){
 
   app.delete('/logout', users.logout);
   app.get('/addresses', addresses.index);
+  app.post('/addresses', addresses.create);
+  app.get('/addresses/new', addresses.new);
 
   console.log('Express: Routes Loaded');
 };

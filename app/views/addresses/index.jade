@@ -1,0 +1,17 @@
+extends ../shared/template
+block content
+  h2 Address Book
+  table.table.table-striped.table-hover.table-bordered
+    thead
+      tr
+        th Name
+        th Twitter
+        th Color
+    tbody
+      each address in addresses
+        tr
+          td= address.name
+          td= address.twitter
+          td(style='background-color:#{address.color};')
+
+block scripts

@@ -1,0 +1,18 @@
+extends ../shared/template
+block content
+  .row
+    .col-xs-4
+      form(role='form', method='post', action='/addresses')
+        .form-group
+          label(for='name') Name
+          input.form-control#name(type='text', name='name', autofocus=true)
+        .form-group
+          label(for='color') Color
+          input.form-control#color(type='color', value='#00ff00', name='color')
+        .form-group
+          label(for='twitter') Twitter
+          input.form-control#twitter(type='text', name='twitter')
+
+        button.btn.btn-primary(type='submit') Add Address
+    .col-xs-8
+block scripts
